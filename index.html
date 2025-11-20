@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Faraz Hussain">
+    <meta name="language" content="English">
+    
+    <!-- SEO Meta Tags -->
+    <title>Elevate X Crew Portfolio</title>
+    <meta name="description" content="Professional AI Specialist and Full Stack Developer from Pakistan. Expert in Generative AI, Machine Learning, Data Science, and Web Development. View my portfolio and projects.">
+    <meta name="keywords" content="Faraz Hussain, AI Specialist, Full Stack Developer, Generative AI, Machine Learning, Data Science, Web Developer, Portfolio, Pakistan, Freelancer, Python, JavaScript, React">
+    <link rel="canonical" href="https://faraz.github.io/portfolio">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Faraz Hussain - AI Specialist & Full Stack Developer">
+    <meta property="og:description" content="Professional AI Specialist and Full Stack Developer from Pakistan. Expert in Generative AI, Machine Learning, Data Science, and Web Development.">
+    <meta property="og:url" content="https://faraz.github.io/portfolio">
+    <meta property="og:site_name" content="Faraz Hussain Portfolio">
+    <meta property="og:image" content="https://faraz.github.io/portfolio/faraz.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ElevateXCrew">
+    <meta name="twitter:description" content="Professional AI Specialist and Full Stack Developer from Pakistan. Expert in Generative AI, Machine Learning, Data Science.">
+    <meta name="twitter:image" content="https://faraz.github.io/portfolio/faraz.png">
+    <meta name="twitter:creator" content="@FarazSha250">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#00d4ff">
+    <meta name="msapplication-TileColor" content="#00d4ff">
+    <meta name="application-name" content="Faraz Hussain Portfolio">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Faraz Hussain",
+      "jobTitle": "AI Specialist & Full Stack Developer",
+      "description": "Professional AI Specialist and Full Stack Developer specializing in Generative AI, Machine Learning, Data Science, and Web Development",
+      "url": "https://faraz.github.io/portfolio",
+      "image": "https://faraz.github.io/portfolio/faraz.png",
+      "email": "aigeniusfaraz@gmail.com",
+      "telephone": "+923238889250",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Pakistan"
+      },
+      "sameAs": [
+        "https://github.com/FarazhussainAI250",
+        "https://www.youtube.com/@FarazHussain-i4v",
+        "https://www.instagram.com/farazhussain175/",
+        "https://x.com/FarazSha250"
+      ],
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Data Science",
+        "Web Development",
+        "Python Programming",
+        "JavaScript",
+        "Generative AI",
+        "Full Stack Development"
+      ],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "AI & Technology Education"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Elevate X Crew Portfolio",
+      "description": "Professional portfolio showcasing AI, Machine Learning, and Web Development projects",
+      "url": "https://faraz.github.io/portfolio",
+      "author": {
+        "@type": "Person",
+        "name": "Elevate X Crew"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://faraz.github.io/portfolio?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="logo.png" alt="Elevate X Crew Logo" class="logo" onclick="toggleTheme()">
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-toggle" id="mobileToggle" style="touch-action: manipulation;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+
+    <section id="home" class="hero">
+
+        <!-- Animated Background Icons -->
+        <div class="floating-icons">
+            <i class="fas fa-code floating-icon"></i>
+            <i class="fas fa-laptop-code floating-icon"></i>
+            <i class="fas fa-robot floating-icon"></i>
+            <i class="fas fa-brain floating-icon"></i>
+            <i class="fas fa-chart-line floating-icon"></i>
+            <i class="fas fa-database floating-icon"></i>
+            <i class="fab fa-python floating-icon"></i>
+            <i class="fab fa-js-square floating-icon"></i>
+        </div>
+        <div class="hero-content" style="text-align: center; justify-content: center; align-items: center;">
+            <div class="hero-text" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p class="greeting">Hello,</p>
+                <h1 class="name animated-text" style="font-size: clamp(3.5rem, 10vw, 6rem); margin-bottom: 1rem;">Elevate X Crew</h1>
+
+                <p class="description">Driven by passion and innovation, ElevateXCrew transforms visions into meaningful results. Your growth is our mission — and your success is our journey.</p>
+                
+                        
+                
+                <div class="hero-buttons" style="justify-content: center;">
+                    <a href="https://wa.me/923052643550" class="btn-primary">Contact Us</a>
+                    <a href="#contact" class="btn-secondary">linkdIn</a>
+                </div>
+            </div>
+            
+
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <h3 class="counter" data-target="1.5">0+</h3>
+                <p>Years of Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="100">0+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="65">0+</h3>
+                <p>AI Tools Expertise</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="100">0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="counter" data-target="8">0+</h3>
+                <p>Awards & Certifications</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Elevate X Crew</h3>
+                    <p>ElevateXCrew transforms ideas into progress and goals into reality. We go beyond projects by creating long-term pathways for growth and impact. With innovation, dedication, and meaningful results, we help businesses rise to their full potential. Your growth is our mission — together, we rise higher.</p>
+                    
+                    <div class="about-info">
+                        <a href="https://your-team-website.com" target="_blank" class="info-item team-btn">
+                            <strong>My Team</strong>
+                            <span>Visit Our Team Website</span>
+                        </a>
+                        <a href="details.html" target="_blank" class="info-item details-btn">
+                            <strong>More Details</strong>
+                            <span>Education & Certifications</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="about.png" alt="Elevate X Crew Team" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Our Skills</h2>
+            <div class="skills-content">
+                <div class="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Machine Learning</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>web development</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Web App Development</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="professional-skills">
+                    <h3>Professional Skills</h3>
+                    <div class="circular-skills">
+                        <div class="circular-skill">
+                            <div class="circle" data-percent="90">
+                                <div class="inner">90%</div>
+                            </div>
+                            <p>Creativity</p>
+                        </div>
+                        <div class="circular-skill">
+                            <div class="circle" data-percent="85">
+                                <div class="inner">85%</div>
+                            </div>
+                            <p>Communication</p>
+                        </div>
+                        <div class="circular-skill">
+                            <div class="circle" data-percent="95">
+                                <div class="inner">95%</div>
+                            </div>
+                            <p>Problem Solving</p>
+                        </div>
+                        <div class="circular-skill">
+                            <div class="circle" data-percent="80">
+                                <div class="inner">80%</div>
+                            </div>
+                            <p>Teamwork</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Generative AI</h3>
+                    <p>Custom AI solutions using GPT, Claude, and other LLMs for content generation, chatbots, and automation.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>Predictive models, data analysis, and ML algorithms to solve complex business problems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Data visualization, statistical analysis, and insights extraction from complex datasets.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack web applications using modern technologies like React, Python, and JavaScript.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>Process automation, workflow optimization, and custom scripts to improve efficiency.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Integrate AI capabilities into existing applications and business processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title"> Portfolio</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2025</span>
+                        <h3>Real-time Shop Manager App</h3>
+                        <div class="timeline-image" onclick="openProjectPage('Real-time Shop Manager App')">
+                            <img src="https://github.com/user-attachments/assets/6d43cf2a-979a-460d-a10f-86f95accfd4d" alt="Real-time Shop Manager App - Python Flask Project">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2025</span>
+                        <h3>AI Medical Assistant</h3>
+                        <div class="timeline-image" onclick="openProjectPage('AI Medical Assistant')">
+                            <img src="https://github.com/user-attachments/assets/8da72dbb-d807-4dff-9844-fe4111aa4c65" alt="AI Medical Assistant Project">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2025</span>
+                        <h3> CV & Cover Letter Generator</h3>
+                        <div class="timeline-image" onclick="openProjectPage(' CV & Cover Letter Generator')">
+                            <img src="https://github.com/user-attachments/assets/8ea5da92-7e43-469a-bce0-f431c9c4679a" alt=" CV & Cover Letter Generator - GPT-based Writing Tool">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2025</span>
+                        <h3>Learn Wise AI Model</h3>
+                        <div class="timeline-image" onclick="openProjectPage('Learn Wise AI Model')">
+                            <img src="https://github.com/user-attachments/assets/7edff376-9241-46de-ab4a-1bb9742324c8" alt="Learn Wise AI Model- Machine Learning Project">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025-2025</span>
+                        <h3>Freelancer Hourly Rate Predictor</h3>
+                        <div class="timeline-image" onclick="openProjectPage('Freelancer Hourly Rate Predictor')">
+                            <img src="https://github.com/user-attachments/assets/ad68e947-25e4-42e2-83b2-96b877bf9f92" alt="Freelancer Hourly Rate Predictor - AI Pricing Tool">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2024</span>
+                        <h3>WhatsApp Bulk Number Sender</h3>
+                        <div class="timeline-image" onclick="openProjectPage('WhatsApp Bulk Number Sender')">
+                            <img src="https://github.com/user-attachments/assets/cfef59f2-30ce-4a66-b7fd-b94cdd93bb2b" alt="WhatsApp Bulk Number Sender">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2024</span>
+                        <h3>Car Price Estimator</h3>
+                        <div class="timeline-image" onclick="openProjectPage('Car Price Estimator')">
+                            <img src="https://github.com/user-attachments/assets/641217ad-f73e-49a2-b64e-46464b5cee96" alt="Car Price Estimator">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2024</span>
+                        <h3>Parking Receipt Generator</h3>
+                        <div class="timeline-image" onclick="openProjectPage('Parking Recipt Generator')">
+                            <img src="https://github.com/user-attachments/assets/dff07ef5-0352-4d8f-8422-425f64f29d50" alt="Parking Receipt Generator - GPT-based Writing Tool">
+                            <div class="image-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- All Projects Button -->
+                <div class="all-projects-btn-container" style="text-align: right; margin-top: 4rem; padding-right: 2rem;">
+                    <a href="projects.html" class="all-projects-btn" style="background: linear-gradient(45deg, #00d4ff, #0099cc); color: white; padding: 1.2rem 3rem; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 1rem; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3); text-transform: uppercase; letter-spacing: 1px;">
+                        <i class="fas fa-folder-open"></i>
+                        View All Projects
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title"> Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-circle active" data-index="0">
+                    <div class="client-image">
+                        <img src="testimonial-1.jpg" alt="Mr Uzair Sab - Software Engineer Client Testimonial">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Professional web development brought our vision to life!"</p>
+                        <h4> Mr Uzair Sab</h4>
+                        <span>Software Engineer & Freelancer</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-circle" data-index="1">
+                    <div class="client-image">
+                        <img src="testimonial-6.jpg" alt="Mr Suleman - Generative AI Specialist Client Testimonial">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"ML model increased our prediction accuracy by 40%!"</p>
+                        <h4>Mr Suleman</h4>
+                        <span>Generative AI Specialist</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-circle" data-index="2">
+                    <div class="client-image">
+                        <img src="testimonial-3.jpg" alt="Mr Farman Sab">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Outstanding automation solutions that saved us hours!"</p>
+                        <h4>Mr Farman Sab</h4>
+                        <span>Seo Specialize</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-circle" data-index="3">
+                    <div class="client-image">
+                        <img src="testimonial-3.jpg" alt="Mr Farman Sab">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Outstanding automation solutions that saved us hours!"</p>
+                        <h4>Mr Farman Sab</h4>
+                        <span>Seo Specialize</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-circle" data-index="4">
+                    <div class="client-image">
+                        <img src="testimonial-2.jpg" alt="Mr Shaziab Malik - Data Scientist Client Testimonial">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"Data science insights transformed our business strategy!"</p>
+                        <h4>Mr Shaziab Malik</h4>
+                        <span>Data Sciencetest & Generation and Agentic AI Specialist </span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-circle" data-index="5">
+                    <div class="client-image">
+                        <img src="testimonial-5.jpg" alt="Mr Ali Hamza - Deputy Director Tecrix Client Testimonial">
+                    </div>
+                    <div class="testimonial-text">
+                        <p>"AI integration exceeded all our expectations!"</p>
+                        <h4>Mr Ali Hamza </h4>
+                        <span>Dupty Director of Tecrix & Generative AI Specialist</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentTestimonial(1)"></span>
+                <span class="dot" onclick="currentTestimonial(2)"></span>
+                <span class="dot" onclick="currentTestimonial(3)"></span>
+                <span class="dot" onclick="currentTestimonial(4)"></span>
+                <span class="dot" onclick="currentTestimonial(5)"></span>
+                <span class="dot" onclick="currentTestimonial(6)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>elevatexcrew@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+923052643550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/movrdrpr" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Elevate X Crew</h3>
+                    <p>AI Specialist & Full Stack Developer</p>
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@MuhammadSuleman" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/MuhammadSulemanAi6275" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/MuhammadSuleman" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/share/1CNNR6eqwb/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/923052643550" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/mr.suleman_vlogs?igsh=ZmNhMmF6dmlrbWlv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Generative AI</li>
+                        <li>Machine Learning</li>
+                        <li>Web Development</li>
+                        <li>Data Science</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i>elevatexcrew@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +923052643550</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Pakistan</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elevate X Crew. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectModal()">&times;</span>
+            <div class="modal-header">
+                <img id="projectImage" src="" alt="">
+                <div class="project-info">
+                    <h2 id="projectTitle"></h2>
+                    <span id="projectDate"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="project-description">
+                    <h3>Project Description</h3>
+                    <p id="projectDesc"></p>
+                </div>
+                <div class="project-tech">
+                    <h3>Technologies Used</h3>
+                    <div id="projectTechnologies"></div>
+                </div>
+                <div class="project-features">
+                    <h3>Key Features</h3>
+                    <ul id="projectFeatures"></ul>
+                </div>
+                <div class="project-buttons" style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <a id="liveDemoBtn" href="#" target="_blank" class="demo-btn" style="background: linear-gradient(45deg, #00d4ff, #0099cc); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; transition: all 0.3s ease;">
+                        <i class="fas fa-external-link-alt"></i> Live Preview
+                    </a>
+                    <a id="sourceCodeBtn" href="#" target="_blank" class="source-btn" style="background: transparent; color: #00d4ff; border: 2px solid #00d4ff; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 500; transition: all 0.3s ease;">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
