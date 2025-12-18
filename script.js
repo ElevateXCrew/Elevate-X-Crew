@@ -146,6 +146,122 @@ function closeProjectModal() {
     document.getElementById('projectModal').style.display = 'none';
 }
 
+// Video Project Modal Functions
+const videoProjectData = {
+    'AI Automation Project': {
+        title: 'AI Automation Project',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Advanced AI automation system jo machine learning algorithms use karke complex tasks ko automate karta hai. Is project me natural language processing aur computer vision ka istemal kiya gaya hai.',
+        technologies: ['Python', 'TensorFlow', 'OpenAI API', 'Flask', 'React'],
+        features: [
+            'Intelligent task automation with ML',
+            'Natural language processing capabilities',
+            'Computer vision integration',
+            'Real-time data processing',
+            'Scalable architecture'
+        ]
+    },
+    'Web Development Showcase': {
+        title: 'Web Development Showcase',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Full-stack web development project jo modern technologies aur best practices ka istemal karta hai. Responsive design aur user-friendly interface ke sath complete web solution.',
+        technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
+        features: [
+            'Responsive and modern UI design',
+            'RESTful API integration',
+            'User authentication and authorization',
+            'Real-time updates with WebSocket',
+            'Database optimization'
+        ]
+    },
+    'Data Science Analytics': {
+        title: 'Data Science Analytics',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Advanced data analysis aur visualization project jo complex datasets ko analyze karke meaningful insights provide karta hai. Machine learning models aur statistical analysis ka combination.',
+        technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
+        features: [
+            'Advanced data visualization',
+            'Predictive analytics with ML',
+            'Statistical analysis tools',
+            'Interactive dashboards',
+            'Data cleaning and preprocessing'
+        ]
+    },
+    'Mobile App Development': {
+        title: 'Mobile App Development',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Cross-platform mobile application jo native features aur smooth performance provide karta hai. Modern UI/UX design ke sath complete mobile solution.',
+        technologies: ['React Native', 'Firebase', 'Redux', 'TypeScript', 'Expo'],
+        features: [
+            'Cross-platform compatibility',
+            'Native device features integration',
+            'Offline functionality',
+            'Push notifications',
+            'Smooth animations and transitions'
+        ]
+    },
+    'E-commerce Platform': {
+        title: 'E-commerce Platform',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Complete online shopping platform jo secure payment gateway aur inventory management ke sath full e-commerce solution provide karta hai.',
+        technologies: ['Next.js', 'Stripe API', 'PostgreSQL', 'Redis', 'AWS'],
+        features: [
+            'Secure payment processing',
+            'Real-time inventory management',
+            'User authentication and profiles',
+            'Order tracking system',
+            'Admin dashboard with analytics'
+        ]
+    },
+    'Blockchain Solution': {
+        title: 'Blockchain Solution',
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+        description: 'Decentralized application jo smart contracts aur blockchain technology use karke secure aur transparent transactions provide karta hai.',
+        technologies: ['Solidity', 'Web3.js', 'Ethereum', 'IPFS', 'MetaMask'],
+        features: [
+            'Smart contract integration',
+            'Decentralized data storage',
+            'Cryptocurrency transactions',
+            'NFT marketplace functionality',
+            'Multi-wallet support'
+        ]
+    }
+};
+
+function openVideoProject(projectId) {
+    const project = videoProjectData[projectId];
+    if (!project) return;
+    
+    // Update modal content
+    document.getElementById('videoProjectTitle').textContent = project.title;
+    document.getElementById('videoProjectFrame').src = project.videoUrl;
+    document.getElementById('videoProjectDesc').textContent = project.description;
+    
+    // Update technologies
+    const techContainer = document.getElementById('videoProjectTechnologies');
+    techContainer.innerHTML = project.technologies.map(tech => 
+        `<span class="tech-tag">${tech}</span>`
+    ).join('');
+    
+    // Update features
+    const featuresContainer = document.getElementById('videoProjectFeatures');
+    featuresContainer.innerHTML = project.features.map(feature => 
+        `<li>${feature}</li>`
+    ).join('');
+    
+    // Show modal
+    document.getElementById('videoProjectModal').style.display = 'block';
+}
+
+function closeVideoProjectModal() {
+    const modal = document.getElementById('videoProjectModal');
+    const videoFrame = document.getElementById('videoProjectFrame');
+    
+    // Stop video by clearing src
+    videoFrame.src = '';
+    modal.style.display = 'none';
+}
+
 // Counter Animation
 window.addEventListener('scroll', function() {
     const counters = document.querySelectorAll('.counter');
@@ -174,9 +290,7 @@ window.addEventListener('scroll', function() {
             });
         }
     }
-});
-
-// Testimonials auto-rotation
+});// Testimonials auto-rotation
 let currentTestimonialIndex = 0;
 
 function currentTestimonial(index) {
@@ -243,10 +357,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal when clicking outside
     window.addEventListener('click', (e) => {
         const modal = document.getElementById('projectModal');
+        const videoModal = document.getElementById('videoProjectModal');
+        
         if (e.target === modal) {
             closeProjectModal();
         }
+        
+        if (e.target === videoModal) {
+            closeVideoProjectModal();
+        }
+    });
+    
+    // Add hover effect to video project cards
+    const videoCards = document.querySelectorAll('.video-project-card');
+    videoCards.forEach(card => {
+        const overlay = card.querySelector('.video-overlay');
+        if (overlay) {
+            card.addEventListener('mouseenter', () => {
+                overlay.style.opacity = '1';
+            });
+            card.addEventListener('mouseleave', () => {
+                overlay.style.opacity = '0';
+            });
+        }
     });
 });
-
-
