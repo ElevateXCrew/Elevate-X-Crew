@@ -3998,22 +3998,45 @@ body.light-mode .video-project-card {
     border-color: rgba(0, 123, 255, 0.3);
 }
 
+body.light-mode .video-project-card::before {
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+}
+
 body.light-mode .video-project-card:hover {
     background: linear-gradient(135deg, rgba(0, 123, 255, 0.25), rgba(0, 86, 179, 0.15));
     border-color: #0056ff;
-    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.4), 0 0 25px rgba(0, 86, 255, 0.3);
+    box-shadow: 0 25px 50px rgba(0, 123, 255, 0.4), 0 0 25px rgba(0, 86, 255, 0.3);
+    transform: translateY(-20px) scale(1.05);
+}
+
+body.light-mode .video-project-card:hover .video-container {
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+body.light-mode .video-project-card:hover .play-button {
+    background: rgba(0, 123, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
 }
 
 body.light-mode .video-project-card h4 {
     color: #007bff;
 }
 
+body.light-mode .video-project-card:hover h4 {
+    color: #0056ff;
+    text-shadow: 0 0 10px rgba(0, 86, 255, 0.5);
+}
+
 body.light-mode .video-project-card p {
     color: #666;
 }
 
-body.light-mode .video-overlay {
-    background: rgba(0, 123, 255, 0.8);
+body.light-mode .video-project-card:hover p {
+    color: #333;
+}
+
+body.light-mode .video-projects-section h3 {
+    color: #007bff;
 }
 
 /* Video Modal Styles */
@@ -4049,14 +4072,39 @@ body.light-mode .video-overlay {
 }
 
 /* Responsive video cards */
+@media (max-width: 1200px) {
+    .video-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .video-projects-section {
         padding-top: 2rem !important;
         margin-top: 3rem !important;
     }
     
-    .video-container {
+    .video-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .video-project-card {
+        padding: 1.5rem 1rem;
+        min-height: auto;
+    }
+    
+    .video-project-card .video-container {
         height: 180px !important;
+    }
+    
+    .video-project-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .video-project-card p {
+        font-size: 0.85rem;
     }
     
     .video-frame {
@@ -4066,6 +4114,24 @@ body.light-mode .video-overlay {
     #videoProjectModal .modal-content {
         width: 95%;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-project-card {
+        padding: 1rem 0.8rem;
+    }
+    
+    .video-project-card .video-container {
+        height: 160px !important;
+    }
+    
+    .video-project-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .video-project-card p {
+        font-size: 0.8rem;
     }
 }
 
@@ -4968,10 +5034,34 @@ body.light-mode .client-reviews {
     text-align: center;
     position: relative;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     text-decoration: none;
     display: block;
+    backdrop-filter: blur(10px);
+    min-height: 320px;
+}
+
+.video-project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.video-project-card:hover::before {
+    left: 100%;
+}
+
+.video-project-card:hover {
+    transform: translateY(-20px) scale(1.05);
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 153, 204, 0.2));
+    border-color: #00ffff;
+    box-shadow: 0 25px 50px rgba(0, 212, 255, 0.4), 0 0 25px rgba(0, 255, 255, 0.3);
 }
 
 .video-project-card .video-container {
@@ -4981,6 +5071,12 @@ body.light-mode .client-reviews {
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.video-project-card:hover .video-container {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
 }
 
 .video-project-card .video-container img {
@@ -4988,6 +5084,12 @@ body.light-mode .client-reviews {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.video-project-card:hover .video-container img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 .video-project-card .play-button {
@@ -5002,6 +5104,13 @@ body.light-mode .client-reviews {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.video-project-card:hover .play-button {
+    background: rgba(0, 212, 255, 0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
 
 .video-project-card .play-button i {
@@ -5014,11 +5123,24 @@ body.light-mode .client-reviews {
     color: #00d4ff;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.video-project-card:hover h4 {
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 
 .video-project-card p {
     color: #ccc;
     font-size: 0.9rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.video-project-card:hover p {
+    color: #fff;
 }
 
 /* All projects button */
